@@ -1,0 +1,20 @@
+<div id="<%= dom_id user %>">
+  <p>
+    <strong>Name:</strong>
+    <%= user.name %>
+  </p>
+
+  <p>
+    <strong>Bio:</strong>
+    <%= user.bio %>
+  </p>
+
+  <%= user.content %> <br /> <%# this is for viewing the reach content attachment we add i.e rich content %>
+  
+  <%= image_tag user.avatar %> <br /> <%# this is for viewing the avatar attachment we add i.e  single image%>
+
+  
+  <% user.images.each do |image| %> <%# this is for viewing the images attachment we add i.e multiple image %>
+    <%= image_tag image %>
+  <% end %>
+</div>
